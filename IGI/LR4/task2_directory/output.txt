@@ -1,0 +1,87 @@
+[GENERAL TASK]
+[text]:
+Lyrics? Yes.
+Infected Mushroom? Yes!
+What?
+
+
+I'm fading away from here.
+I'm fading away from here.
+I'm fading away from here.
+I'M FADING AWAY FROM HERE!
+
+I'm fading away from here,
+can't see nothing clear. 
+Even though I'm awake,
+my body slowly breaks.
+Feel so cold that I shake, 
+every time I reflect.
+The story's ready to burst,
+I shout to serve my thirst.
+It seems to clear my head,
+when I'm awake at night.
+I pull my thoughts so tight,
+when lying in the dark.
+Feeling rich with words,
+about to draw my sword.
+Regretting half my chords,
+I'm starting all from scratch.
+
+Take me away.
+Shattered my hopes today.
+Nothing can be done I see.
+All will end so tragically for me.
+
+
+:)
+:-)
+:--------)
+;)
+;]
+;----]
+;--]]]]]]]]]]]]]
+;-(((((((
+:-----------[[[[[
+
+;;-)
+:;--]
+;--]))]
+:[]
+
+;{
+(
+:_]
+[results]:
+number of interrogative sentences: 3
+number of exclamatory sentences: 2
+number of narrative sentences: 16
+number of sentences: 21
+average sentence length: 24.095238095238095
+average word length: 3.748148148148148
+number of smileys: 13
+[SPECIAL TASK]
+all words that include a-o or 0-9: ['Lyrics', 'Yes', 'Infected', 'Mushroom', 'Yes', 'What', 'm', 'fading', 'away', 'from', 'here', 'm', 'fading', 'away', 'from', 'here', 'm', 'fading', 'away', 'from', 'here', 'm', 'fading', 'away', 'from', 'here', 'can', 'see', 'nothing', 'clear', 'Even', 'though', 'm', 'awake', 'my', 'body', 'slowly', 'breaks', 'Feel', 'so', 'cold', 'that', 'shake', 'every', 'time', 'reflect', 'The', 'story', 'ready', 'to', 'burst', 'shout', 'to', 'serve', 'my', 'thirst', 'seems', 'to', 'clear', 'my', 'head', 'when', 'm', 'awake', 'at', 'night', 'pull', 'my', 'thoughts', 'so', 'tight', 'when', 'lying', 'in', 'the', 'dark', 'Feeling', 'rich', 'with', 'words', 'about', 'to', 'draw', 'my', 'sword', 'Regretting', 'half', 'my', 'chords', 'm', 'starting', 'all', 'from', 'scratch', 'Take', 'me', 'away', 'Shattered', 'my', 'hopes', 'today', 'Nothing', 'can', 'be', 'done', 'see', 'All', 'will', 'end', 'so', 'tragically', 'for', 'me']
+[number tests]
+Is string '123456' a six-digit decimal with no leading zeros: True
+Is string '012345' a six-digit decimal with no leading zeros: False
+Is string '0123456' a six-digit decimal with no leading zeros: False
+Is string '100001' a six-digit decimal with no leading zeros: True
+Is string '308050' a six-digit decimal with no leading zeros: True
+Is string 'e26621' a six-digit decimal with no leading zeros: False
+Is string ' 99999' a six-digit decimal with no leading zeros: False
+Is string '11111 ' a six-digit decimal with no leading zeros: False
+[end of number tests]
+[quotes test text]:
+" " 
+"
+
+"
+
+" 1 " "  aaaaddd    asd aaaaaaaa ddddwwwaaas w" 
+number of words in quotes: 6
+[letters test text]:
+quick brown fox jumps over the lazy dog
+occurences of letters: {'a': 1, 'b': 1, 'c': 1, 'd': 1, 'e': 2, 'f': 1, 'g': 1, 'h': 1, 'i': 1, 'j': 1, 'k': 1, 'l': 1, 'm': 1, 'n': 1, 'o': 4, 'p': 1, 'q': 1, 'r': 2, 's': 1, 't': 1, 'u': 2, 'v': 1, 'w': 1, 'x': 1, 'y': 1, 'z': 1, 'A': 0, 'B': 0, 'C': 0, 'D': 0, 'E': 0, 'F': 0, 'G': 0, 'H': 0, 'I': 0, 'J': 0, 'K': 0, 'L': 0, 'M': 0, 'N': 0, 'O': 0, 'P': 0, 'Q': 0, 'R': 0, 'S': 0, 'T': 0, 'U': 0, 'V': 0, 'W': 0, 'X': 0, 'Y': 0, 'Z': 0}
+[comma collocations test text]:
+Do you want some hot, milk? Well hello, pretty kitty.
+all comma collocations sorted: ['hello, pretty', 'hot, milk']
