@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{%block title%} {{title}} {%endblock%}
+
+{%block content%}
+	<h1> {{title}} </h1>
+	<h2>Клиент: {{client.user.first_name}} {{client.user.last_name}}</h2>
+	<p>Почта: {{client.user.email}}</p>
+	<p>Номер телефона: {{client.phone_number}}</p>
+	{# <p>Заказы клиента: #}
+
+
+{%endblock%}

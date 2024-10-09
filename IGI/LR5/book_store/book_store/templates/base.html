@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+	<header>
+			<ul>
+				{% if user.is_authenticated %}
+					{%if user.is_staff%}
+						<li><a href="{% url 'orders' %}">Заказы клиентов</a></li>
+					{%else%}
+						<li><a href="{% url 'personal_cabinet' %}">Личный кабинет</a></li>
+						<li><a href="{% url 'orders' %}">Ваши заказы</a></li>
+					{%endif%}
+					<li><a href="{% url 'logout' %}">Выйти</a></li>
+				{% else %}
+					<li><a href="{% url 'login' %}">Войти</a></li>
+				{% endif %}
+				<br>
+				<li><a href="{% url 'catalog' %}">Каталог</a></li>
+				<li><a href="{% url 'index' %}">Главная</a></li>
+				<li><a href="{% url 'about' %}">О компании</a></li>
+				<li><a href="{% url 'news' %}">Новости</a></li>
+				<li><a href="{% url 'faq' %}">Словарь терминов и понятий</a></li>
+				<li><a href="{% url 'contacts' %}">Контакты</a></li>
+				<li><a href="{% url 'privacy' %}">Политика конфиденциальности</a></li>
+				<li><a href="{% url 'vacancies' %}">Вакансии</a></li>
+				<li><a href="{% url 'reviews' %}">Отзывы</a></li>
+				<li><a href="{% url 'coupons' %}">Промокоды и купоны</a></li>
+			</ul>
+	</header>
+
+	<main>
+		{% block content %} {% endblock %}
+	</main>
+</body>
+
+<footer>
+	<p><b>BookStore</b></p>
+</footer>
+</html>

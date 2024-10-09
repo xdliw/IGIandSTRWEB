@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+
+{%block title%} Новости: {{article.title}} {%endblock%}
+
+{%block content%}
+
+	<h1> Новости: {{article.title}} </h1>
+
+	{%if article.image%}
+		<img src="{{ article.image.url }}" alt="*Картинка для этой новости*">
+	{%endif%}
+	<p><b> Дата изменения: {{article.last_modification_date}} </b></p>
+	<p> {{article.body}} </p>
+
+{%endblock%}

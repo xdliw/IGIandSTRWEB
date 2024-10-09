@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %} 
+	<h1> {{ title }} </h1>
+
+	{% if coupons %}
+		<h2> Список активных купонов: </h2>
+		{%for coupon in coupons%}
+			{%if coupon.is_active%}
+				<p> Купон на скидку в {{coupon.discount}} % по коду "{{coupon.code}}".</p>
+			{%endif%}
+		{%endfor%}
+		<hr>
+		<h2> Список купонов в архиве: </h2>
+		{%for coupon in coupons%}
+			{%if not coupon.is_active%}
+				<p> Неактивный купон на скидку в {{coupon.discount}} % по коду "{{coupon.code}}".</p>
+			{%endif%}
+		{%endfor%}
+	{% else %}
+		<p>Пока что нет доступных купонов.</p>
+	{% endif %}
+{% endblock %}

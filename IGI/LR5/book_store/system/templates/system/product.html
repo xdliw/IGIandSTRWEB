@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{%block title%} {{title}} {%endblock%}
+
+{%block content%}
+	<h1> {{title}} </h1>
+	
+	{% if product.image %}
+		<img src="{{ product.image.url }}" alt="Здесь должно быть изображение">
+	{% endif %}
+
+	<p>Авторы:</p>
+	<ul>
+	{%for author in product.authors.all%}
+		<li>{{author}}</li>
+	{%endfor%}
+	</ul>
+	<p>Тип продукта: {{product.product_type}}<p>
+	<p>В наличии: {{product.amount}}</p>
+	<p>Цена: {{product.price}} BYN</p>
+
+	{%if user.is_authenticated%}
+		<a href="{%url 'buying_product' product.id %}">Купить</a>
+	{%else%}
+		<a href="{%url 'login'%}">Авторизуйтесь, чтобы купить продукт</a>
+	{%endif%}
+{%endblock%}
