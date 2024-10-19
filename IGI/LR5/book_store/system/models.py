@@ -24,7 +24,6 @@ class Product(models.Model):
 	product_type = models.ForeignKey(ProductType, on_delete=models.CASCADE)
 	authors = models.ManyToManyField(Author)
 	amount = models.IntegerField(default = 0, validators=[MinValueValidator(0)])
-	amount_sold = models.IntegerField(default = 0, validators=[MinValueValidator(0)])
 	image = models.ImageField(upload_to='images/products', blank=True)
 
 	def __str__(self):
@@ -40,7 +39,8 @@ class Coupon(models.Model):
 class Order(models.Model):
 	is_finished = models.BooleanField(default = False)
 	client = models.ForeignKey('users.Client', on_delete=models.CASCADE)
-	product = models.ForeignKey(Product, on_delete=models.CASCADE)
+	product = models.ForeignKey(Product, on_delete=models.CASCADE) #its done the way that only one item of product can be in 1 order
 	sell_date = models.DateTimeField(default = timezone.now)
 	applied_coupon = models.ForeignKey(Coupon, on_delete=models.CASCADE, null=True, blank=True)
 
+	

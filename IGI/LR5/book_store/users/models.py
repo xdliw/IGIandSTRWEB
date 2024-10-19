@@ -13,6 +13,9 @@ class Client(models.Model):
 			)])
 	date_of_birth = models.DateField()
 
+	def __str__(self):
+		return f"{self.user.first_name} {self.user.last_name }"
+
 
 class Employee(models.Model):
 	user = models.OneToOneField(get_user_model(), on_delete=models.CASCADE)
@@ -26,3 +29,7 @@ class Employee(models.Model):
 	vacancy = models.ForeignKey(Vacancy, on_delete=models.PROTECT, null=True)
 	image = models.ImageField(upload_to='images/employees', blank=True)
 	
+	def __str__(self):
+		return f"{self.user.first_name} {self.user.last_name }"
+
+
