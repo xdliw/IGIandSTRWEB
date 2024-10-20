@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{%block title%} {{title}} {%endblock%}
+
+{%block content%}
+	<h1> {{title}} </h1>
+
+	{%for product in products%}
+		<p><b>{{product.name}}</b></p>
+		
+		{% if product.image %}
+		<img src="{{ product.image.url }}" alt="Здесь должно быть изображение">
+		{% endif %}
+
+		<p>Авторы:</p>
+		<ul>
+		{%for author in product.authors.all%}
+			<li>{{author}}</li>
+		{%endfor%}
+		</ul>
+		<p>Тип продукта: {{product.product_type}}<p>
+		<p>В наличии: {{product.amount}}</p>
+		<p>Цена: {{product.price}} BYN</p>
+
+		<a href={%url 'product' product.id%}>Подробнее</a>
+
+		<hr>
+
+	{%endfor%}
+	
+{%endblock%}

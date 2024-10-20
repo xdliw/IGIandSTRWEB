@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+	<h1> {{ title }} </h1>
+	<h2> Последняя новость </h2>
+	{% if article %}
+		<h2>{{ article.title }}</h2>
+		{% if article.image %}
+			<img src="{{ article.image.url }}" alt="Здесь должно быть изображение" width="auto" height="150">
+		{% endif %}
+		<p>Краткое содержание: {{ article.summary }}</p>
+		<p>Дата изменения: {{ article.last_modification_date }}</p>
+		<a href="{% url 'article' article.id %}">Читать полностью</a>
+	{% else %}
+		<p> Нет доступных новостей </p>
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{%block title%} {{title}} {%endblock%}
+
+{%block content%}
+	<h1> {{title}} </h1>
+
+	<h2> Активные заказы </h2>
+	{%for order in unfinished_orders%}
+
+		<h3>Заказ #{{forloop.counter}} на продукт:</h3>
+		<h4>{{order.product.name}}</h4>
+		{% if order.product.image %}
+			<img src="{{ order.product.image.url }}" alt="Здесь должно быть изображение">
+		{% endif %}
+		
+		<p>Авторы:</p>
+		<ul>
+		{%for author in order.product.authors.all%}
+			<li>{{author}}</li>
+		{%endfor%}
+		</ul>
+
+		<p>Тип продукта: {{order.product.product_type}}<p>
+		<p>Цена: {{order.product.price}} BYN</p>
+
+		{%if user.is_staff%}
+			<a href="{%url 'client_info' order.client.id%}">Заказчик</a>
+		{%endif%}
+
+		<hr>
+	{%endfor%}
+
+	<h2>Выполненные заказы</h2>
+	{%for order in finished_orders%}
+
+		<h3>Заказ #{{forloop.counter}} на продукт:</h3>
+		<h4>{{order.product.name}}</h4>
+		{% if order.product.image %}
+			<img src="{{ order.product.image.url }}" alt="Здесь должно быть изображение">
+		{% endif %}
+		
+		<p>Авторы:</p>
+		<ul>
+		{%for author in order.product.authors.all%}
+			<li>{{author}}</li>
+		{%endfor%}
+		</ul>
+
+		<p>Тип продукта: {{order.product.product_type}}<p>
+		<p>Цена: {{order.product.price}} BYN</p>
+
+		{%if user.is_staff%}
+			<a href="{%url 'client_info' order.client.id%}">Заказчик</a>
+		{%endif%}
+
+		<hr>
+	{%endfor%}
+
+
+{%endblock%}
